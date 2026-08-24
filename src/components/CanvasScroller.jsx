@@ -40,12 +40,12 @@ export default function CanvasScroller({ images, frameCount }) {
     render();
     window.addEventListener('resize', render);
 
-    // Autoplay Timeline (10 seconds for 300 frames = 30fps)
+    // Autoplay Timeline (20 seconds for luxurious pacing and reading time)
     const tl = gsap.timeline({ repeat: -1 });
     
     tl.to(sequence, {
       frame: frameCount - 1,
-      duration: 10,
+      duration: 20,
       ease: "none",
       snap: "frame",
       onUpdate: render
