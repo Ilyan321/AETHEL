@@ -19,7 +19,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled 
           ? 'bg-basalt/85 backdrop-blur-md border-b border-terracotta/50 py-6 drop-shadow-xl' 
-          : 'bg-transparent border-b border-transparent py-8'
+          : 'bg-gradient-to-b from-basalt/90 via-basalt/40 to-transparent border-b border-transparent py-8'
       }`}
     >
       <div className="max-w-[90vw] mx-auto flex items-center justify-between">
