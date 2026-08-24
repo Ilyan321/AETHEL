@@ -19,7 +19,7 @@ export default function Home() {
       {!isLoaded ? (
         <FramePreloader progress={progress} />
       ) : (
-        <main className="relative w-full bg-[#161817] overflow-x-hidden">
+        <main className="relative w-full bg-[#25211E] overflow-x-hidden">
           
           {/* Ambient Glow Orbs (Option 1) fixed in the deep background */}
           <div className="fixed top-[20vh] -left-[10vw] w-[50vw] h-[50vw] bg-terracotta/20 rounded-full mix-blend-screen blur-[120px] opacity-70 pointer-events-none z-0"></div>
@@ -29,8 +29,10 @@ export default function Home() {
           
           {/* Hero Section - Autoplay Presentation */}
           <section className="relative w-full h-screen overflow-hidden">
-            {/* Core Autoplay Canvas (Clean View) */}
-            <CanvasScroller images={images} frameCount={FRAME_COUNT} />
+            {/* Core Autoplay Canvas (Masked to blend seamlessly) */}
+            <div className="absolute inset-0 w-full h-full [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
+              <CanvasScroller images={images} frameCount={FRAME_COUNT} />
+            </div>
             <HeadsUpDisplay />
           </section>
 
