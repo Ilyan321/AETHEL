@@ -40,10 +40,8 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-8 font-mono text-[10px] tracking-[0.2em] text-white/30">
         <p>© {new Date().getFullYear()} ÆTHEL HOROLOGY. ALL RIGHTS RESERVED.</p>
-        <p className="mt-4 md:mt-0 flex items-center space-x-3">
-          <span>SWISS MANUFACTURE</span>
-          <span className="w-1 h-1 bg-terracotta rounded-full"></span>
-          <span>CALIBRE DE PRÉCISION</span>
+        <p className="mt-4 md:mt-0 flex items-center space-x-3 uppercase">
+          <span>MADE BY ILYAN KHAN</span>
         </p>
       </div>
     </footer>
