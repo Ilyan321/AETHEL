@@ -33,7 +33,7 @@ export default function SpecMatrix() {
   ];
 
   return (
-    <section id="design" className="relative z-40 bg-transparent border-t-2 border-terracotta/30 shadow-[0_-10px_30px_rgba(184,93,59,0.1)] py-32 px-[10vw]">
+    <section id="design" className="relative z-40 bg-transparent py-32 px-[10vw]">
 
       <h2 className="font-serif text-3xl text-sandstone text-center mb-24 tracking-widest uppercase drop-shadow-lg">
         Architectural Deconstruction
