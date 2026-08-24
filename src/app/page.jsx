@@ -4,6 +4,7 @@ import Lenis from '@studio-freight/lenis';
 import { useFramePreloader } from '@/hooks/useFramePreloader';
 import FramePreloader from '@/components/FramePreloader';
 import CanvasScroller from '@/components/CanvasScroller';
+import HeadsUpDisplay from '@/components/HeadsUpDisplay';
 import SpecMatrix from '@/components/SpecMatrix';
 export default function Home() {
   const FRAME_COUNT = 300; // Using 300 high-fidelity 30fps frames
@@ -24,6 +25,7 @@ export default function Home() {
 
           {/* Core Autoplay Canvas (Clean View) */}
           <CanvasScroller images={images} frameCount={FRAME_COUNT} />
+          <HeadsUpDisplay />
         </section>
 
         {/* Technical Specs Information Below with Theme Background */}
