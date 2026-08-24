@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
 import { useFramePreloader } from '@/hooks/useFramePreloader';
+import FramePreloader from '@/components/FramePreloader';
 import CanvasScroller from '@/components/CanvasScroller';
 import HeadsUpDisplay from '@/components/HeadsUpDisplay';
 import Navbar from '@/components/Navbar';
@@ -15,7 +16,9 @@ export default function Home() {
   const { images, progress, isLoaded } = useFramePreloader(FRAME_COUNT);
 
   return (
-    <main className="relative w-full bg-[#282828] overflow-x-hidden">
+    <>
+      {!isLoaded && <FramePreloader progress={progress} />}
+      <main className="relative w-full bg-[#282828] overflow-x-hidden">
       
       {/* Ambient Glow Orbs (Option 1) fixed in the deep background */}
       <div className="fixed top-[20vh] -left-[10vw] w-[50vw] h-[50vw] bg-terracotta/10 rounded-full mix-blend-screen blur-[120px] opacity-30 pointer-events-none z-0"></div>
@@ -42,5 +45,6 @@ export default function Home() {
       <AboutSection />
       <Footer />
     </main>
+    </>
   );
 }
