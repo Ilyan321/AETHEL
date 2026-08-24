@@ -31,10 +31,10 @@ export default function Navbar() {
 
         {/* Center: Technical Links */}
         <div className="hidden md:flex space-x-12">
-          {['THE MONOLITH', 'CALIBRE Æ-01', 'HERITAGE'].map((link) => (
+          {['DESIGN', 'SPECS', 'ABOUT'].map((link) => (
             <a 
               key={link} 
-              href={`#${link.toLowerCase().replace(' ', '-')}`}
+              href={`#${link.toLowerCase()}`}
               className="font-mono text-xs tracking-[0.2em] text-chalk/70 hover:text-white transition-colors duration-300 drop-shadow-md"
             >
               {link}
@@ -44,9 +44,7 @@ export default function Navbar() {
 
         {/* Right: Action */}
         <button className="font-mono text-xs tracking-widest text-terracotta hover:text-white transition-colors duration-300 group flex items-center drop-shadow-md cursor-pointer pointer-events-auto">
-          <span className="opacity-50 mr-2 group-hover:opacity-100 transition-opacity">[</span>
-          REQUEST ALLOCATION
-          <span className="opacity-50 ml-2 group-hover:opacity-100 transition-opacity">]</span>
+          PRE-ORDER
         </button>
         
       </div>
