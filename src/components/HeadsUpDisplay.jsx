@@ -7,6 +7,7 @@ export default function HeadsUpDisplay() {
   const layer1 = useRef(null);
   const layer2 = useRef(null);
   const layer3 = useRef(null);
+  const layer4 = useRef(null);
   useEffect(() => {
     // Master Autoplay Timeline (20 seconds) synced with CanvasScroller
     const tl = gsap.timeline({ repeat: -1 });
