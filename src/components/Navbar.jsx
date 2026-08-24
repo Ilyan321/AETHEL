@@ -1,27 +1,8 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <nav 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-basalt/85 backdrop-blur-md border-b border-terracotta/50 py-6 drop-shadow-xl' 
-          : 'bg-gradient-to-b from-basalt/90 via-basalt/40 to-transparent border-b border-transparent py-8'
-      }`}
-    >
+    <nav className="fixed top-0 left-0 w-full z-50 bg-basalt/30 backdrop-blur-md border-b border-white/5 py-6 shadow-xl">
       <div className="max-w-[90vw] mx-auto flex items-center justify-between">
         
         {/* Left: Logo */}
