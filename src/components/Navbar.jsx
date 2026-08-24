@@ -2,8 +2,8 @@
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-basalt/30 backdrop-blur-md border-b border-white/5 py-6 shadow-xl">
-      <div className="max-w-[90vw] mx-auto flex items-center justify-between">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[85vw] max-w-4xl z-50 bg-basalt/40 backdrop-blur-md border border-white/10 py-4 px-8 rounded-full shadow-2xl">
+      <div className="flex items-center justify-between">
         
         {/* Left: Logo */}
         <div className="font-serif text-2xl tracking-[0.2em] text-sandstone cursor-pointer drop-shadow-lg">
