@@ -29,8 +29,10 @@ export default function Home() {
           
           {/* Hero Section - Autoplay Presentation */}
           <section className="relative w-full h-screen overflow-hidden">
-            {/* Core Autoplay Canvas (Clean View) */}
-            <CanvasScroller images={images} frameCount={FRAME_COUNT} />
+            {/* Core Autoplay Canvas (Micro-feathered edge) */}
+            <div className="absolute inset-0 w-full h-full [mask-image:linear-gradient(to_bottom,black_97%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_97%,transparent_100%)]">
+              <CanvasScroller images={images} frameCount={FRAME_COUNT} />
+            </div>
             <HeadsUpDisplay />
           </section>
 
