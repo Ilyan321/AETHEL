@@ -14,7 +14,7 @@ export function useFramePreloader(frameCount) {
       const img = new Image();
       // Ensure the correct padding (e.g. frame_0001.webp)
       const formattedIndex = String(i).padStart(4, '0');
-      img.src = `/sequence/frame_${formattedIndex}.webp`;
+      img.src = `./sequence/frame_${formattedIndex}.webp`;
 
       img.onload = () => {
         loadedImages[i - 1] = img;

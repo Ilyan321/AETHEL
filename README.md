@@ -44,3 +44,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to experie
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 *Made by Ilyan Khan.*
+
+## 👤 About the Author
+
+**Ilyan Khan** is an obsessed front-end engineer and creative developer who specializes in bridging the gap between extreme mechanical luxury and bleeding-edge web technology. With a focus on high-fidelity 3D rendering, GSAP kinematics, and brutalist aesthetic design, Ilyan crafts digital experiences that don't just display products, but elevate them into interactive art pieces.
+
