@@ -6,6 +6,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #121514;
+  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+}
+
 @layer utilities {
   .text-shadow-sm {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);

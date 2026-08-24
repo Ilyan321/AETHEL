@@ -33,9 +33,9 @@ export default function SpecMatrix() {
   ];
 
   return (
-    <section id="design" className="relative z-40 bg-basalt border-t border-white/5 py-32 px-[10vw]">
+    <section id="design" className="relative z-40 bg-transparent border-t-2 border-terracotta/30 shadow-[0_-10px_30px_rgba(184,93,59,0.1)] py-32 px-[10vw]">
 
-      <h2 className="font-serif text-3xl text-sandstone text-center mb-24 tracking-widest uppercase">
+      <h2 className="font-serif text-3xl text-sandstone text-center mb-24 tracking-widest uppercase drop-shadow-lg">
         Architectural Deconstruction
       </h2>
       
@@ -43,9 +43,9 @@ export default function SpecMatrix() {
         {phases.map((phase, idx) => (
           <div 
             key={idx} 
-            className="group relative border-l border-olive pl-8 hover:border-terracotta transition-colors duration-500"
+            className="group relative border-l-2 border-olive/50 pl-8 hover:border-bronze transition-all duration-500 hover:shadow-[-20px_0_30px_-15px_rgba(163,131,80,0.3)]"
           >
-            <div className="font-mono text-terracotta text-xs tracking-[0.2em] mb-4">
+            <div className="font-mono text-terracotta text-xs tracking-[0.2em] mb-4 group-hover:text-bronze transition-colors drop-shadow-md">
               {phase.subtitle}
             </div>
             <h3 className="font-serif text-2xl text-sandstone mb-4 group-hover:text-white transition-colors">
