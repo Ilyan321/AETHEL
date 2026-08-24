@@ -1,27 +1,46 @@
-# ÆTHEL — Haute Horology Scrollytelling Experience
+# ÆTHEL Haute Horlogerie
 
-This project is a high-performance scrollytelling web experience built purely with HTML5 Canvas, GSAP ScrollTrigger, and Lenis for inertial scrolling. It avoids generic UI patterns, adhering to a strict bespoke "Zero AI Slop" editorial design system as specified in the PRD.
+An ultra-luxury, high-performance web experience for the conceptual independent watchmaker **ÆTHEL**. Built to showcase the *Calibre Æ-01 Monolith* timepiece using cinematic 3D sequence rendering and smooth scroll-based interactions.
 
-## Features implemented:
-- **Pinned Canvas Scrubber:** 100 frames mapped to a 500vh scroll container. (Placeholder rotating geometries generated via Python).
-- **Scroll-Linked HUD:** 4 staggered editorial phases appearing dynamically in sync with the scroll percentage.
-- **Inertial Scrolling:** Powered by `@studio-freight/lenis`.
-- **Custom Cursor Crosshair:** SVG/CSS-based bespoke interaction.
-- **Waitlist / Allocation Modal:** Accessible via navigation and final phase, with simulated backend submission and form validation.
-- **Specification Matrix:** CSS Grid-based micro-tolerance technical specs section.
+## 🕰️ The Experience
 
-## How to run locally:
+This repository contains the front-end codebase for the ÆTHEL digital showcase. The application is built to deliver a heavy, mechanical, and deeply immersive premium aesthetic, discarding standard web layouts for an interactive cinematic journey.
 
-Since the project uses ES Modules and dynamically loads assets (the canvas frames), it needs to be served over HTTP.
+### Core Technologies:
+- **Next.js (App Router):** Fast, React-based framework.
+- **GSAP (ScrollTrigger):** Synchronizes the 300-frame 3D sequence and Heads-Up Display (HUD) directly to the user's scroll position.
+- **Lenis:** Provides butter-smooth, interpolated momentum scrolling.
+- **Tailwind CSS:** Fully customized brutalist luxury theme utilizing deep charcoals (`#282828`), Terracotta, Bronze, and Sandstone accents.
+- **HTML5 Canvas:** High-fidelity 60fps frame-by-frame 3D video sequence rendering via a custom `useFramePreloader` Web Worker implementation.
 
-You can instantly start a local server using Python:
+## ⚙️ Features
+
+- **Cinematic Canvas Scroller:** The hero section translates scroll velocity into 3D rotational mechanics, parsing hundreds of `.webp` frames instantly.
+- **Micro-Preloader:** An ultra-minimal loading state prevents blank flashes while caching 3D textures in the background.
+- **GSAP Heads-Up Display:** As the watch rotates to specific angles, synchronized frosted-glass data panels elegantly slide into view to detail specific mechanical elements (Chassis, Crystal, Movement).
+- **Architectural Typography:** Uses a tight grid system, micro-typography (`text-[10px]`), and tracking-heavy (`tracking-widest`) layouts to mimic high-end Swiss print magazines.
+- **Private Dossier Pre-Order:** A sleek, single-column allocation application modal designed for high-net-worth collectors.
+
+## 🚀 Getting Started
+
+First, ensure you have the required 300 `.webp` sequence frames placed in the `public/sequence/` directory.
+
+Run the development server:
 
 ```bash
-cd /home/ilyan/ÆTHEL
-python3 -m http.server 8000
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Then open your browser and navigate to `http://localhost:8000`.
+Open [http://localhost:3000](http://localhost:3000) with your browser to experience the site.
 
-## Assets
-The placeholder `100` WebP frames were dynamically generated via Python and are located in `public/sequence/`. You can replace them with the ultra-high-definition 3D rendered watch frames later, following the `frame_XXXX.webp` naming convention (0000 to 0099).
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+*Made by Ilyan Khan.*
