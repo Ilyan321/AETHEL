@@ -16,18 +16,17 @@ export default function CanvasScroller({ images, frameCount }) {
     const container = containerRef.current;
     
     const sequence = { frame: 0 };
-    const triggers = [];
 
-    const render = () => {
-      // Ensure dimensions are strictly viewport
+    const resize = () => {
       const dpr = window.devicePixelRatio || 1;
       canvas.width = window.innerWidth * dpr;
       canvas.height = window.innerHeight * dpr;
-      
-      // Force CSS size to viewport so the dense buffer scales down
       canvas.style.width = `${window.innerWidth}px`;
       canvas.style.height = `${window.innerHeight}px`;
+      render();
+    };
 
+    const render = () => {
       const img = images[sequence.frame];
       if (img && img.complete) {
         const { drawWidth, drawHeight, offsetX, offsetY } = getCoverMath(img, canvas);
@@ -36,9 +35,9 @@ export default function CanvasScroller({ images, frameCount }) {
       }
     };
 
-    // Initial render
-    render();
-    window.addEventListener('resize', render);
+    // Initial sizing
+    resize();
+    window.addEventListener('resize', resize);
 
     // Autoplay Timeline (12 seconds for faster pacing)
     const tl = gsap.timeline({ repeat: -1 });
@@ -52,7 +51,7 @@ export default function CanvasScroller({ images, frameCount }) {
     });
 
     return () => {
-      window.removeEventListener('resize', render);
+      window.removeEventListener('resize', resize);
       tl.kill();
     };
   }, [images, frameCount]);
