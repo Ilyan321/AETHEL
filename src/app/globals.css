@@ -7,8 +7,7 @@ html {
 }
 
 body {
-  background-color: #121514;
-  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+  background-color: #000000;
 }
 
 @layer utilities {

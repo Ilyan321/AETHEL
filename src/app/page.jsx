@@ -19,7 +19,7 @@ export default function Home() {
       {!isLoaded ? (
         <FramePreloader progress={progress} />
       ) : (
-        <main className="relative w-full bg-transparent overflow-x-hidden">
+        <main className="relative w-full bg-black overflow-x-hidden">
           
           {/* Ambient Glow Orbs (Option 1) fixed in the deep background */}
           <div className="fixed top-[20vh] -left-[10vw] w-[50vw] h-[50vw] bg-terracotta/20 rounded-full mix-blend-screen blur-[120px] opacity-70 pointer-events-none z-0"></div>
