@@ -41,36 +41,37 @@ export default function Navbar() {
 
       {/* PRE-ORDER MODAL */}
       {isPreOrderOpen && (
-        <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="relative w-full max-w-md bg-[#161817] border border-white/10 p-10">
-            <button onClick={() => setPreOrderOpen(false)} className="absolute top-6 right-6 font-mono text-white/40 hover:text-white transition-colors text-lg">✕</button>
+        <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="relative w-full max-w-lg bg-[#161817] border border-terracotta/20 p-10 sm:p-12 shadow-2xl">
+            <button onClick={() => setPreOrderOpen(false)} className="absolute top-6 right-6 font-mono text-white/40 hover:text-white transition-colors text-xl">✕</button>
             
-            <div className="font-mono text-terracotta text-[10px] tracking-[0.3em] mb-10">ALLOCATION DOSSIER</div>
+            <div className="font-mono text-terracotta text-xs tracking-[0.3em] mb-4">EDITION 00 / 50</div>
+            <h2 className="font-serif text-4xl text-sandstone mb-6">SECURE ALLOCATION</h2>
             
-            <form className="space-y-8 font-mono text-[10px] tracking-[0.2em]" onSubmit={(e) => { e.preventDefault(); alert("Application Dossier Submitted."); setPreOrderOpen(false); }}>
+            <p className="font-sans text-white/60 font-light mb-10 leading-relaxed text-sm">
+              The Calibre Æ-01 Monolith is strictly restricted to 50 physical examples worldwide. Allocation is granted exclusively via private review. 
+            </p>
+
+            <form className="space-y-6 font-mono text-xs tracking-widest" onSubmit={(e) => { e.preventDefault(); alert("Application Dossier Submitted."); setPreOrderOpen(false); }}>
               
-              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-2">
-                <input type="text" placeholder="LEGAL NAME" required className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full" />
+              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-1">
+                <input type="text" placeholder="FULL LEGAL NAME" required className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full py-2" />
               </div>
               
-              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-2">
-                <input type="email" placeholder="PRIVATE EMAIL" required className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full" />
+              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-1">
+                <input type="email" placeholder="PRIVATE EMAIL" required className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full py-2" />
               </div>
 
-              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-2">
-                <input type="text" placeholder="PRIMARY RESIDENCE" required className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full" />
+              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-1">
+                <input type="text" placeholder="PRIMARY RESIDENCE (CITY/COUNTRY)" required className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full py-2" />
               </div>
 
-              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-2">
-                <input type="number" min="1" max="50" placeholder="PREFERRED EDITION (01-50)" className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full" />
+              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-1">
+                <input type="text" placeholder="NOTABLE HOROLOGICAL PIECES (OPTIONAL)" className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full py-2" />
               </div>
 
-              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-2">
-                <input type="text" placeholder="NOTABLE HOROLOGICAL PIECES" className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full" />
-              </div>
-
-              <button type="submit" className="w-full mt-4 border border-white/20 text-white/50 hover:border-terracotta hover:text-terracotta py-4 transition-all duration-300">
-                SUBMIT
+              <button type="submit" className="w-full mt-6 border border-terracotta text-terracotta hover:bg-terracotta hover:text-black py-4 transition-all duration-300 font-bold tracking-[0.2em]">
+                SUBMIT DOSSIER
               </button>
             </form>
           </div>
