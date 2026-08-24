@@ -41,49 +41,36 @@ export default function Navbar() {
 
       {/* PRE-ORDER MODAL */}
       {isPreOrderOpen && (
-        <div className="fixed inset-0 z-[100] bg-[#161817]/95 backdrop-blur-xl flex items-center justify-center p-4 sm:p-8">
-          <div className="relative w-full max-w-3xl bg-[#282828] border-t-2 border-terracotta/40 shadow-[0_0_50px_rgba(184,93,59,0.15)] p-10 sm:p-14">
-            <button onClick={() => setPreOrderOpen(false)} className="absolute top-8 right-8 font-mono text-chalk hover:text-terracotta transition-colors text-2xl">✕</button>
+        <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="relative w-full max-w-md bg-[#161817] border border-white/10 p-10">
+            <button onClick={() => setPreOrderOpen(false)} className="absolute top-6 right-6 font-mono text-white/40 hover:text-white transition-colors text-lg">✕</button>
             
-            <div className="font-mono text-terracotta text-xs tracking-[0.4em] mb-4 drop-shadow-md">EDITION 00 / 50</div>
-            <h2 className="font-serif text-4xl sm:text-5xl text-sandstone mb-6 tracking-wide drop-shadow-lg">SECURE ALLOCATION</h2>
-            <div className="w-[2px] h-12 bg-bronze/50 shadow-[0_0_10px_rgba(163,131,80,0.5)] mb-8"></div>
+            <div className="font-mono text-terracotta text-[10px] tracking-[0.3em] mb-10">ALLOCATION DOSSIER</div>
             
-            <p className="font-sans text-chalk/80 font-light mb-12 leading-relaxed text-sm max-w-xl">
-              The Calibre Æ-01 Monolith is strictly restricted to exactly 50 physical examples worldwide. 
-              Allocation is granted exclusively via private review. 
-              Please submit your collector dossier below for consideration.
-            </p>
-
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 font-mono text-xs tracking-widest" onSubmit={(e) => { e.preventDefault(); alert("Application Dossier Submitted."); setPreOrderOpen(false); }}>
+            <form className="space-y-8 font-mono text-[10px] tracking-[0.2em]" onSubmit={(e) => { e.preventDefault(); alert("Application Dossier Submitted."); setPreOrderOpen(false); }}>
               
-              <div className="flex flex-col border-b border-white/10 focus-within:border-terracotta transition-colors pb-2 group">
-                <label className="text-white/40 mb-2 group-focus-within:text-terracotta transition-colors">FULL LEGAL NAME</label>
-                <input type="text" required className="bg-transparent text-white focus:outline-none" />
+              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-2">
+                <input type="text" placeholder="LEGAL NAME" required className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full" />
               </div>
               
-              <div className="flex flex-col border-b border-white/10 focus-within:border-terracotta transition-colors pb-2 group">
-                <label className="text-white/40 mb-2 group-focus-within:text-terracotta transition-colors">PRIVATE EMAIL</label>
-                <input type="email" required className="bg-transparent text-white focus:outline-none" />
+              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-2">
+                <input type="email" placeholder="PRIVATE EMAIL" required className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full" />
               </div>
 
-              <div className="flex flex-col border-b border-white/10 focus-within:border-terracotta transition-colors pb-2 group">
-                <label className="text-white/40 mb-2 group-focus-within:text-terracotta transition-colors">PRIMARY RESIDENCE (CITY / COUNTRY)</label>
-                <input type="text" required className="bg-transparent text-white focus:outline-none" />
+              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-2">
+                <input type="text" placeholder="PRIMARY RESIDENCE" required className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full" />
               </div>
 
-              <div className="flex flex-col border-b border-white/10 focus-within:border-terracotta transition-colors pb-2 group">
-                <label className="text-white/40 mb-2 group-focus-within:text-terracotta transition-colors">PREFERRED EDITION NUMBER (01-50)</label>
-                <input type="number" min="1" max="50" className="bg-transparent text-white focus:outline-none" />
+              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-2">
+                <input type="number" min="1" max="50" placeholder="PREFERRED EDITION (01-50)" className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full" />
               </div>
 
-              <div className="flex flex-col border-b border-white/10 focus-within:border-terracotta transition-colors pb-2 group md:col-span-2">
-                <label className="text-white/40 mb-2 group-focus-within:text-terracotta transition-colors">CURRENT HOROLOGICAL COLLECTION (NOTABLE PIECES)</label>
-                <input type="text" className="bg-transparent text-white focus:outline-none" />
+              <div className="border-b border-white/20 focus-within:border-terracotta transition-colors pb-2">
+                <input type="text" placeholder="NOTABLE HOROLOGICAL PIECES" className="bg-transparent text-white placeholder-white/30 focus:outline-none w-full" />
               </div>
 
-              <button type="submit" className="md:col-span-2 mt-4 bg-transparent border border-terracotta text-terracotta hover:bg-terracotta hover:text-black hover:shadow-[0_0_20px_rgba(184,93,59,0.4)] font-bold tracking-[0.3em] py-5 transition-all duration-300">
-                SUBMIT DOSSIER
+              <button type="submit" className="w-full mt-4 border border-white/20 text-white/50 hover:border-terracotta hover:text-terracotta py-4 transition-all duration-300">
+                SUBMIT
               </button>
             </form>
           </div>
