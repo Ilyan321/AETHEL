@@ -7,6 +7,7 @@ import CanvasScroller from '@/components/CanvasScroller';
 import HeadsUpDisplay from '@/components/HeadsUpDisplay';
 import Navbar from '@/components/Navbar';
 import SpecMatrix from '@/components/SpecMatrix';
+import SpecsSection from '@/components/SpecsSection';
 import AboutSection from '@/components/AboutSection';
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
 
           {/* Technical Specs Information Below with Theme Background */}
           <SpecMatrix />
+
+          {/* Calibre AE-01 Technical Specifications */}
+          <SpecsSection />
 
           {/* Brand Heritage Section */}
           <AboutSection />

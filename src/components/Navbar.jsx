@@ -3,7 +3,6 @@
 import { useState } from 'react';
 
 export default function Navbar() {
-  const [isSpecsOpen, setSpecsOpen] = useState(false);
   const [isPreOrderOpen, setPreOrderOpen] = useState(false);
 
   return (
@@ -18,15 +17,15 @@ export default function Navbar() {
 
           {/* Center: Technical Links */}
           <div className="hidden md:flex space-x-12">
-            <a href="#design" className="font-mono text-xs tracking-[0.2em] text-chalk/70 hover:text-white transition-colors duration-300 drop-shadow-md">
-              DESIGN
-            </a>
-            <button onClick={() => setSpecsOpen(true)} className="font-mono text-xs tracking-[0.2em] text-chalk/70 hover:text-white transition-colors duration-300 drop-shadow-md cursor-pointer">
-              SPECS
-            </button>
-            <a href="#about" className="font-mono text-xs tracking-[0.2em] text-chalk/70 hover:text-white transition-colors duration-300 drop-shadow-md">
-              ABOUT
-            </a>
+            {['DESIGN', 'SPECS', 'ABOUT'].map((link) => (
+              <a 
+                key={link} 
+                href={`#${link.toLowerCase()}`}
+                className="font-mono text-xs tracking-[0.2em] text-chalk/70 hover:text-white transition-colors duration-300 drop-shadow-md"
+              >
+                {link}
+              </a>
+            ))}
           </div>
 
           {/* Right: Action */}
@@ -39,25 +38,6 @@ export default function Navbar() {
           
         </div>
       </nav>
-
-      {/* SPECS MODAL */}
-      {isSpecsOpen && (
-        <div className="fixed inset-0 z-[100] bg-basalt/90 backdrop-blur-lg flex items-center justify-center p-8">
-          <div className="relative w-full max-w-3xl bg-[#121514] border border-olive/50 p-12 shadow-2xl">
-            <button onClick={() => setSpecsOpen(false)} className="absolute top-6 right-6 font-mono text-chalk hover:text-white text-xl">✕</button>
-            <div className="font-mono text-terracotta text-sm tracking-[0.3em] mb-4">CALIBRE Æ-01</div>
-            <h2 className="font-serif text-4xl text-sandstone mb-12">TECHNICAL SPECIFICATIONS</h2>
-            <div className="grid grid-cols-2 gap-8 font-mono text-sm">
-              <div className="border-b border-olive/30 pb-4"><span className="text-chalk block mb-1">MOVEMENT</span><span className="text-white">One-minute flying tourbillon</span></div>
-              <div className="border-b border-olive/30 pb-4"><span className="text-chalk block mb-1">FREQUENCY</span><span className="text-white">28,800 VPH (4Hz)</span></div>
-              <div className="border-b border-olive/30 pb-4"><span className="text-chalk block mb-1">POWER RESERVE</span><span className="text-white">72 Hours (Twin Barrel)</span></div>
-              <div className="border-b border-olive/30 pb-4"><span className="text-chalk block mb-1">JEWELS</span><span className="text-white">35 Rubies</span></div>
-              <div className="border-b border-olive/30 pb-4"><span className="text-chalk block mb-1">WATER RESISTANCE</span><span className="text-white">10 ATM (100 Meters)</span></div>
-              <div className="border-b border-olive/30 pb-4"><span className="text-chalk block mb-1">TOTAL WEIGHT</span><span className="text-white">46.5 Grams</span></div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* PRE-ORDER MODAL */}
       {isPreOrderOpen && (
