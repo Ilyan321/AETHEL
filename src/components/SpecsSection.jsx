@@ -1,9 +1,6 @@
 export default function SpecsSection() {
   return (
-    <section id="specs" className="relative z-40 bg-gradient-to-tr from-basalt via-[#1a1a15] to-[#252119] border-t border-olive py-32 px-[10vw]">
-      
-      {/* Subtle overlay texture */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-bronze/5 via-transparent to-transparent pointer-events-none"></div>
+    <section id="specs" className="relative z-40 bg-basalt border-t border-white/5 py-32 px-[10vw]">
 
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className="font-mono text-terracotta text-sm tracking-[0.3em] mb-4 text-center">CALIBRE Æ-01</div>
