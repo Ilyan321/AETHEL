@@ -22,8 +22,8 @@ export default function Home() {
         <main className="relative w-full bg-[#282828] overflow-x-hidden">
           
           {/* Ambient Glow Orbs (Option 1) fixed in the deep background */}
-          <div className="fixed top-[20vh] -left-[10vw] w-[50vw] h-[50vw] bg-terracotta/20 rounded-full mix-blend-screen blur-[120px] opacity-70 pointer-events-none z-0"></div>
-          <div className="fixed bottom-[10vh] -right-[10vw] w-[60vw] h-[60vw] bg-bronze/10 rounded-full mix-blend-screen blur-[150px] opacity-60 pointer-events-none z-0"></div>
+          <div className="fixed top-[20vh] -left-[10vw] w-[50vw] h-[50vw] bg-terracotta/10 rounded-full mix-blend-screen blur-[120px] opacity-30 pointer-events-none z-0"></div>
+          <div className="fixed bottom-[10vh] -right-[10vw] w-[60vw] h-[60vw] bg-bronze/5 rounded-full mix-blend-screen blur-[150px] opacity-20 pointer-events-none z-0"></div>
 
           <Navbar />
           

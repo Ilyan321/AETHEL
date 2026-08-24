@@ -7,7 +7,7 @@ export default function AboutSection() {
         <h2 className="font-serif text-5xl text-sandstone leading-tight mb-12 drop-shadow-lg">
           THE RELENTLESS PURSUIT OF ABSOLUTE PRECISION.
         </h2>
-        <div className="w-[2px] h-24 bg-bronze shadow-[0_0_15px_rgba(163,131,80,0.8)] mx-auto mb-12"></div>
+        <div className="w-[2px] h-24 bg-bronze/70 shadow-[0_0_15px_rgba(163,131,80,0.3)] mx-auto mb-12"></div>
         <p className="font-sans text-chalk font-light leading-loose text-lg mx-auto max-w-2xl drop-shadow-sm">
           ÆTHEL was founded on a singular philosophy: to strip away the superfluous and elevate the essential. 
           By combining forged carbon architecture with hyper-accurate kinetic escapements, we create timepieces that are not merely worn, but experienced. 
