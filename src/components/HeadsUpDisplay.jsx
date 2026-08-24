@@ -33,30 +33,39 @@ export default function HeadsUpDisplay() {
     <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-30">
       
       {/* Minimal Layer 1 */}
-      <div ref={layer1} className="absolute bottom-[20vh] left-[10vw] opacity-0 flex items-center space-x-4">
-        <div className="h-[1px] w-12 bg-terracotta"></div>
-        <div>
-          <div className="font-mono text-terracotta text-[10px] tracking-[0.3em] mb-1 drop-shadow-md">PHASE 01</div>
-          <h2 className="font-serif text-lg text-white tracking-widest drop-shadow-lg">CHASSIS</h2>
+      <div ref={layer1} className="absolute bottom-[15vh] left-[8vw] max-w-md opacity-0 flex space-x-6">
+        <div className="w-[2px] h-full bg-terracotta/80 shadow-[0_0_8px_rgba(184,93,59,0.5)]"></div>
+        <div className="py-1">
+          <div className="font-mono text-terracotta text-[10px] tracking-[0.3em] mb-2 drop-shadow-md">PHASE 01 / EXPLODED VIEW</div>
+          <h2 className="font-serif text-xl text-white tracking-widest mb-3 drop-shadow-lg">STRUCTURAL DECONSTRUCTION</h2>
+          <p className="font-sans text-xs text-sandstone font-light leading-relaxed drop-shadow-md">
+            The forged basalt carbon casing unbinds, revealing the inner titanium core architecture.
+          </p>
         </div>
       </div>
 
       {/* Minimal Layer 2 */}
-      <div ref={layer2} className="absolute bottom-[20vh] left-[10vw] opacity-0 flex items-center space-x-4">
-        <div className="h-[1px] w-12 bg-terracotta"></div>
-        <div>
-          <div className="font-mono text-terracotta text-[10px] tracking-[0.3em] mb-1 drop-shadow-md">PHASE 02</div>
-          <h2 className="font-serif text-lg text-white tracking-widest drop-shadow-lg">CRYSTAL</h2>
+      <div ref={layer2} className="absolute bottom-[15vh] left-[8vw] max-w-md opacity-0 flex space-x-6">
+        <div className="w-[2px] h-full bg-terracotta/80 shadow-[0_0_8px_rgba(184,93,59,0.5)]"></div>
+        <div className="py-1">
+          <div className="font-mono text-terracotta text-[10px] tracking-[0.3em] mb-2 drop-shadow-md">PHASE 02 / COMPONENT SEPARATION</div>
+          <h2 className="font-serif text-xl text-white tracking-widest mb-3 drop-shadow-lg">KINETIC ISOLATION</h2>
+          <p className="font-sans text-xs text-sandstone font-light leading-relaxed drop-shadow-md">
+            Individual mechanical tolerances and the flying tourbillon cage are exposed in zero-gravity suspension.
+          </p>
         </div>
       </div>
 
       {/* Minimal Layer 3 */}
-      <div ref={layer3} className="absolute bottom-[20vh] right-[10vw] opacity-0 flex items-center space-x-4 text-right">
-        <div>
-          <div className="font-mono text-terracotta text-[10px] tracking-[0.3em] mb-1 drop-shadow-md">PHASE 03</div>
-          <h2 className="font-serif text-lg text-white tracking-widest drop-shadow-lg">MOVEMENT</h2>
+      <div ref={layer3} className="absolute bottom-[15vh] right-[8vw] max-w-md opacity-0 flex space-x-6 text-right justify-end">
+        <div className="py-1">
+          <div className="font-mono text-terracotta text-[10px] tracking-[0.3em] mb-2 drop-shadow-md">PHASE 03 / FINAL SYNTHESIS</div>
+          <h2 className="font-serif text-xl text-white tracking-widest mb-3 drop-shadow-lg">HARMONIC REASSEMBLY</h2>
+          <p className="font-sans text-xs text-sandstone font-light leading-relaxed drop-shadow-md ml-auto">
+            Over 300 micro-components seamlessly realign into the definitive Monolith structure.
+          </p>
         </div>
-        <div className="h-[1px] w-12 bg-terracotta"></div>
+        <div className="w-[2px] h-full bg-terracotta/80 shadow-[0_0_8px_rgba(184,93,59,0.5)]"></div>
       </div>
 
     </div>
