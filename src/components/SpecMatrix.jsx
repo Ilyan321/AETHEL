@@ -33,7 +33,7 @@ export default function SpecMatrix() {
   ];
 
   return (
-    <section className="relative z-40 bg-gradient-to-br from-basalt via-[#1a1412] to-[#2a1710] border-t border-olive py-32 px-[10vw]">
+    <section id="design" className="relative z-40 bg-gradient-to-br from-basalt via-[#1a1412] to-[#2a1710] border-t border-olive py-32 px-[10vw]">
       
       {/* Subtle overlay texture/noise if wanted, or just clean gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-terracotta/10 via-transparent to-transparent pointer-events-none"></div>

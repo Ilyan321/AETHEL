@@ -7,6 +7,8 @@ import CanvasScroller from '@/components/CanvasScroller';
 import HeadsUpDisplay from '@/components/HeadsUpDisplay';
 import Navbar from '@/components/Navbar';
 import SpecMatrix from '@/components/SpecMatrix';
+import AboutSection from '@/components/AboutSection';
+
 export default function Home() {
   const FRAME_COUNT = 300; // Using 300 high-fidelity 30fps frames
   const { images, progress, isLoaded } = useFramePreloader(FRAME_COUNT);
@@ -23,11 +25,14 @@ export default function Home() {
           <section className="relative w-full h-screen overflow-hidden">
             {/* Core Autoplay Canvas (Clean View) */}
             <CanvasScroller images={images} frameCount={FRAME_COUNT} />
-          <HeadsUpDisplay />
-        </section>
+            <HeadsUpDisplay />
+          </section>
 
-        {/* Technical Specs Information Below with Theme Background */}
-        <SpecMatrix />
+          {/* Technical Specs Information Below with Theme Background */}
+          <SpecMatrix />
+
+          {/* Brand Heritage Section */}
+          <AboutSection />
         </main>
       )}
     </>
