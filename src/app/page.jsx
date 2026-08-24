@@ -9,6 +9,7 @@ import Navbar from '@/components/Navbar';
 import SpecMatrix from '@/components/SpecMatrix';
 import SpecsSection from '@/components/SpecsSection';
 import AboutSection from '@/components/AboutSection';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const FRAME_COUNT = 300; // Using 300 high-fidelity 30fps frames
@@ -44,6 +45,7 @@ export default function Home() {
 
           {/* Brand Heritage Section */}
           <AboutSection />
+          <Footer />
         </main>
       )}
     </>
