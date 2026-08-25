@@ -7,6 +7,7 @@ const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"], varia
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
+  metadataBase: new URL("https://ilyan321.github.io/AETHEL/"),
   title: "ÆTHEL — Kinetic Haute Horlogerie",
   description: "Interactive scrollytelling web experience showcasing a micro-mechanical timepiece.",
   openGraph: {
